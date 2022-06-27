@@ -31,8 +31,8 @@
         </td>
         <td>
           <div class="">
-          <a href="{{url('edit-cat/'.$category->id)}}" class=""> <i class="fa fa-pencil"></i></a>
-          <a href="{{url('delete-cat/'.$category->id)}}" class=""> <i class="fa fa-trash"></i></a>
+          <a href="{{url('edit-cat/'.$category->id)}}" class=""> <i class="fa fa-pencil" title="Edit"></i></a>
+          <a href="{{url('delete-cat/'.$category->id)}}" class=""> <i class="fa fa-trash" title="Delete"></i></a>
         </div>
         </td>
          </tr>   

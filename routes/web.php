@@ -117,10 +117,10 @@ Route::post('/update-prod/{id}', [ProductController::class, 'update']);
 Route::get('/delete-prod/{id}', [ProductController::class, 'destroy']);
 
 //Orders management
-Route::get('/orders', [OrderController::class,'orders']);
+Route::get('/orders', [OrderController::class,'index']);
 Route::get('/view-orders/{id}', [OrderController::class,'view']);
-Route::put('/update-order/{id}', [OrderController::class,'updateorder']);
-Route::get('/order-history', [OrderController::class,'orderhistory']);
+Route::put('/update-order/{id}', [OrderController::class,'update']);
+Route::get('/order-history', [OrderController::class,'history']);
 Route::get('/delete-order/{id}', [OrderController::class,'destroy']);
 
 

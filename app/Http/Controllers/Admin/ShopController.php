@@ -10,6 +10,14 @@ use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
 {
+    function __construct()
+    {
+     $this->middleware('permission:view-shops|create-shop|edit-shop|list-product', ['only' => ['index','users']]);
+        $this->middleware('permission:create-product', ['only' => ['create','store']]);
+      $this->middleware('permission:edit-product', ['only' => ['edit','update']]);
+       $this->middleware('permission:delete-product', ['only' => ['destroy']]);
+}
+
     public function index()
     {
         $user_id = Auth::user()->id;

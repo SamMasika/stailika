@@ -8,7 +8,15 @@ use App\Http\Controllers\Controller;
 
 class OrderController extends Controller
 {
-    public function orders()
+    function __construct()
+    {
+     $this->middleware('permission:view-orders|update-orders|view-orderhistory|delete-orders', ['only' => ['index','users']]);
+        $this->middleware('permission:create-product', ['only' => ['create','store']]);
+      $this->middleware('permission:edit-product', ['only' => ['edit','update']]);
+       $this->middleware('permission:delete-product', ['only' => ['destroy']]);
+}
+
+    public function index()
     {
         $orders=Order::where('status','0')->get();
         return view('admin.orders.index',compact('orders'));
@@ -19,7 +27,7 @@ class OrderController extends Controller
         return view('admin.orders.view',compact('orders'));
     }
 
-    public function updateorder(request $request,$id)
+    public function update(request $request,$id)
     {
         $orders=Order::find($id);
         $orders->status=$request->order_status;
@@ -27,7 +35,7 @@ class OrderController extends Controller
         return redirect('/orders')->with('status',"Orders Updated Successfully!");
     }
 
-    public function orderhistory()
+    public function history()
     {
         $orders=Order::where('status','1')->get();
         return view('admin.orders.history',compact('orders'));
