@@ -31,7 +31,7 @@
     </li>
     
 
-    {{-- @can('view-settings') --}}
+    @can('view-settings')
    
     {{-- <li class="nav-item {{Request::is('users')?'active':''}} ">
       <a class="nav-link" href="{{url('users')}}">
@@ -57,7 +57,7 @@
             <p>Role Management</p>
           </a>
         </li>
-    {{-- @endcan --}}
+    @endcan
    
   </ul>
 </div>
