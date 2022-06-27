@@ -54,14 +54,14 @@
 
       <div class="col-md-12 mb-3">
         <label for="meta_keywords">Meta Keywords</label>
-        <input type="text" class="form-control" name="meta_keywords"value="{{$category->meta_keywords}}" >
+        <input type="text" class="form-control" name="meta_keywords" value="{{$category->meta_keywords}}" >
       </div>
 
       @if ($category->image)
-         <img src=" {{asset('admin/images/category/'.$category->image)}}" alt="Category Image" style="width: 100px; height:100px;"> 
+         <img src=" {{asset('admin/images/category/'.$category->image)}}" alt="Category Image" style="width:100px; height:100px;"> 
          @endif
          <div class="col-md-12">
-            <input type="file" class="form-control" name="image">
+            <input type="file" class="form-control"  name="image">
           </div>
       <div class="col-md-12">
         <button type="submit" class="btn btn-primary">Submit</button>
