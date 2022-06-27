@@ -58,7 +58,7 @@
       </div>
 
       @if ($category->image)
-         <img src=" {{asset('admin/images/category/'.$category->image)}}" alt="Category Image" style="width:100px; height:100px;"> 
+         <img src=" {{asset('admin/images/category/'.$category->image)}}" alt="Category Image"> 
          @endif
          <div class="col-md-12">
             <input type="file" class="form-control"  name="image">
