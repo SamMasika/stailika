@@ -12,7 +12,7 @@
   </div>
 </div>
 
-<div class="card">
+{{-- <div class="card"> --}}
   <table class="table table-responsive table-hover w-auto">
      <thead>
        <tr>
@@ -48,5 +48,5 @@
        @endforeach  
      </tbody>
    </table>
-  </div>      
+  {{-- </div>       --}}
 @endsection

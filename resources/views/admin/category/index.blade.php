@@ -9,7 +9,7 @@
   </div>
 </div>
 
-  <div class="card">
+  {{-- <div class="card"> --}}
    <table class="table table-responsive table-hover ">
      <thead>
        <tr>
@@ -42,7 +42,7 @@
      </tbody>
    </table>
   {{-- </div> --}}
-</div>
+{{-- </div> --}}
           
          
            

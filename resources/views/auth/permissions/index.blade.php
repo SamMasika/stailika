@@ -40,7 +40,7 @@
       </h4>
     </div>
 </div>
-<div class="card">
+{{-- <div class="card"> --}}
   
   {{-- <div class="card-body"> --}}
       {{-- <h3>{{ Str::camel($permission['name']) }}</h3> --}}
@@ -79,7 +79,7 @@
 @endforeach
    </table>
   {{-- </div> --}}
-</div>   
+{{-- </div>    --}}
 
 
 <!-- Modal -->

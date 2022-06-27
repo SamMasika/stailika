@@ -5,9 +5,9 @@
   <div class="card-header">
     <h4>Registered Users</h4>
   </div>
-  <hr>
+</div>
   {{-- <div class="card-body"> --}}
-   <table class="table table-hover responsive  w-auto">
+   <table class="table table-hover table-responsive  w-auto">
      <thead>
        <tr>
          <th>ID</th>
@@ -35,5 +35,5 @@
      </tbody>
    </table>
   {{-- </div> --}}
-</div>
+{{-- </div> --}}
 @endsection

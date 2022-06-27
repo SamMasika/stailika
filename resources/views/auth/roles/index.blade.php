@@ -37,7 +37,7 @@
       </h4>
     </div>
 </div>
-<div class="card">
+{{-- <div class="card"> --}}
   
   {{-- <div class="card-body"> --}}
       {{-- <h3>{{ Str::camel($rolission['name']) }}</h3> --}}
@@ -73,7 +73,7 @@
 @endforeach
    </table>
   {{-- </div> --}}
-</div>   
+{{-- </div>    --}}
 
 
 <div class="modal fade" id="roleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
