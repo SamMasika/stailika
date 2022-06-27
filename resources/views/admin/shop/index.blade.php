@@ -10,7 +10,7 @@
 </div>
   {{-- <div class="card-body"> --}}
     <div class="card">
-   <table class="table  table-hover responsive w-auto">
+   <table class="table  table-hover table-responsive w-auto">
      <thead>
        <tr>
          <th>Name</th>

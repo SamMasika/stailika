@@ -13,7 +13,7 @@
             </div>
             <div class="card">
                 {{-- <div class="card-body"> --}}
-                    <table class="table responsive table-hover w-auto">
+                    <table class="table table-responsive table-hover w-auto">
                         <thead>
                            <tr>
                              <th>ID</th>

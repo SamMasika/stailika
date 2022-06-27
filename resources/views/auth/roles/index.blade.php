@@ -41,7 +41,7 @@
   
   {{-- <div class="card-body"> --}}
       {{-- <h3>{{ Str::camel($rolission['name']) }}</h3> --}}
-      <table class="table  table-hover responsive w-auto">
+      <table class="table  table-hover table-responsive w-auto">
           <thead>
               <tr>
 

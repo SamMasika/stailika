@@ -10,7 +10,7 @@
 </div>
 
   <div class="card">
-   <table class="table responsive table-hover ">
+   <table class="table table-responsive table-hover ">
      <thead>
        <tr>
          <th width="5%">ID</th>

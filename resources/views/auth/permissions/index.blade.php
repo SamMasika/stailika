@@ -44,7 +44,7 @@
   
   {{-- <div class="card-body"> --}}
       {{-- <h3>{{ Str::camel($permission['name']) }}</h3> --}}
-      <table class="table responsive table-hover w-auto">
+      <table class="table table-responsive table-hover w-auto">
           <thead>
               <tr>
 
