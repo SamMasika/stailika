@@ -64,12 +64,13 @@ class UserController extends Controller
        
         if ($user->hasRole($request->role))
         {
-            return redirect('/user')->with('success', 'Role exists.');        
+            return redirect('/user')->with('error', 'Role exists.');        
         }
-        else{
+        else
+        {
 
             $user->assignRole($request->role);
-            return back()->with('success', 'Role assigned.');
+            return redirect('/user')->with('success', 'Role assigned.');
         }
     }
 
@@ -82,7 +83,7 @@ class UserController extends Controller
             return back()->with('success', 'Permission exists.');
         }
         $user->givePermissionTo($request->permission);
-        return back()->with('success', 'Permission added.');
+        return redirect('/roles-list')->with('success', 'Permission added.');
     }
 
     public function removeRole(User $user, Role $role)
