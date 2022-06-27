@@ -75,7 +75,7 @@
       </div>
 
       @if ($product->image)
-      <img src=" {{asset('admin/images/product/'.$product->image)}}" alt="Product Image" class="prod-img"> 
+      <img src=" {{asset('admin/images/product/'.$product->image)}}" alt="Product-Image" class="prod-img" style="width: 100px; height:100px;"> 
       @endif
       <div class="col-md-12">
          <input type="file" class="form-control" name="image">

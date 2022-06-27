@@ -39,7 +39,7 @@
                             </div>
                             <div class="form-field py-0">
                                 <button type="submit" class="btn btn-primary btn-block">
-                                    <i class="fa fa-registered" aria-hidden="true"></i>
+                                    {{-- <i class="fa fa-registered" aria-hidden="true"></i> --}}
                                     {{ __('Register') }}
                                 </button>
                                 
