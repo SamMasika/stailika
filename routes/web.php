@@ -74,7 +74,7 @@ Route::middleware(['auth'])->group(function () {
    Route::post('/store-role', [RoleController::class, 'store']);
    Route::get('/edit-role/{id}', [RoleController::class, 'edit']);
    Route::post('/update-role/{id}', [RoleController::class, 'update']);
-   Route::get('/delete-role/{id}', [RoleController::class, 'destroy']);
+   Route::delete('/delete-role/{id}', [RoleController::class, 'destroy'])->name('delete.role');
    Route::get('/createassign/{id}', [PermissionRoleController::class, 'createRolePerm']);
    Route::post('/assign/{id}', [PermissionRoleController::class, 'assignPerm']);
    Route::get('/show/{id}', [PermissionRoleController::class, 'show']);
@@ -95,7 +95,7 @@ Route::get('/create-permission', [PermissionController::class, 'create']);
 Route::post('/store-permission', [PermissionController::class, 'store']);
 Route::post('/update-permission/{id}', [PermissionController::class, 'update']);
 Route::get('/edit-permission/{id}', [PermissionController::class, 'edit']);
-Route::get('/delete-permission/{id}', [PermissionController::class, 'destroy']);
+Route::delete('/delete-permission/{id}', [PermissionController::class, 'destroy'])->name('delete.permission');
 
 // Route::get('/dashboard', function () {
 //    return view('admin.dashboard');

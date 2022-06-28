@@ -61,12 +61,12 @@
                 <div class=" btn-group ">
                 <a href="" class=""><i class="fa fa-eye" title="View"></i></a>
                 <a href="{{url('edit-role/'.$rol->id)}}" ><i class="fa fa-pencil" title="Edit"></i></a>
-                <a href="{{url('delete-role/'.$rol->id)}}" ><i class="fa fa-trash" title="Delete"></i></a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#ModalDelete{{$rol->id}}"><i class="fa fa-trash" title="Delete"></i></a>
                 <a href="{{url('createassign/'.$rol->id)}}" class="btn btn-primary btn-sm">AssignPermissions</a>
             </div>
             
             </td>
-
+              @include('auth.roles.delete')
         </tr>
     @endforeach
 </tbody>
@@ -91,7 +91,7 @@
         <input type="text" class="form-control" name="name">
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success">Create</button>
+          <button type="submit" class="btn btn-primary">Create</button>
        </div>
     </form>
       </div>

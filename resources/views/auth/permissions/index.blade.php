@@ -66,12 +66,12 @@
             <td>
                 <div class=" btn-group ">
                 {{-- <a href="" class="btn btn-info btn-sm ">View</a> --}}
-                <a href="{{url('edit-permission/'.$perm->id)}}" class=" "><i class="fa fa-pencil" title="Edit"></i></a>
-                <a href="{{url('delete-permission/'.$perm->id)}}" class=""><i class="fa fa-trash" title="Delete"></i></a>
+                <a href="{{url('edit-permission/'.$perm->id)}}" ><i class="fa fa-pencil" title="Edit"></i></a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#ModalDelete{{$perm->id}}"><i class="fa fa-trash" title="Delete"></i></a>
             </div>
             
             </td>
-
+       @include('auth.permissions.delete')
         </tr>
     @endforeach
       
@@ -102,7 +102,7 @@
         <input type="text" class="form-control" name="description">
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success">Create</button>
+          <button type="submit" class="btn btn-primary">Create</button>
        </div>
     </form>
       </div>
