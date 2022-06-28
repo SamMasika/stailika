@@ -31,10 +31,10 @@
 @section('content')
 <div class="card">
 
-    <div class="card-header">
+    <div class="card-header bg-primary">
       <h4> Permissions
         {{-- @can('create-permission') --}}
-        <a href="{{url('create-permission')}}" class="btn btn-primary float-right " data-bs-toggle="modal" data-bs-target="#roleModal">Create Permission</a>  
+        <a href="{{url('create-permission')}}" class="btn btn-success float-right " data-bs-toggle="modal" data-bs-target="#roleModal">Create Permission</a>  
          {{-- @endcan --}}
         
       </h4>
@@ -102,7 +102,7 @@
         <input type="text" class="form-control" name="description">
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Create</button>
+          <button type="submit" class="btn btn-success">Create</button>
        </div>
     </form>
       </div>

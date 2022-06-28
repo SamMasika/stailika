@@ -25,7 +25,8 @@ class CategoryController extends Controller
     public function index()
     {
         $categories=Category::all();
-        return view('admin.category.index',compact('categories'));
+        $shops=Shop::all();
+        return view('admin.category.index',compact('categories','shops'));
     }
 
     public function create()

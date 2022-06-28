@@ -35,8 +35,12 @@ class ProductController extends Controller
                 ->get();
                 
             }
+
+            $category=Category::all();
+            $shops=Shop::all();
+            $users=User::all();
             // var_dump($products);
-            return view('admin.product.index',compact('products'));
+            return view('admin.product.index',compact('products','users','shops','category'));
         }
     
        

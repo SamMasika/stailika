@@ -1,14 +1,12 @@
-@extends('layouts.admin')
-
-@section('content')
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-              <h4>Edit Shop</h4>
-            </div>
-            <div class="card-body">
-           
-              <form action="{{url('update-shop/'.$shop->id)}}" method="post" enctype="multipart/form-data">
+<div class="modal fade" id="ModalEdit{{$shop->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Shop</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="{{url('update-shop/'.$shop->id)}}" method="post" enctype="multipart/form-data">
                 @csrf
           
                 <div class="row">
@@ -39,8 +37,7 @@
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </div>
-              </form>
-            </div>
-          </div>   
+              </form> 
+        </div>
     </div>
-@endsection
+  </div>

@@ -7,6 +7,7 @@
   </div>
   <div class="card-body">
  
+    
     <form action="{{url('insert-product')}}" method="post" enctype="multipart/form-data">
       @csrf
       <div class="row">

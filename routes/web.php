@@ -64,7 +64,7 @@ Route::middleware(['auth'])->group(function () {
    Route::post('/store-shop', [ShopController::class, 'store']);
    Route::get('/edit-shop/{id}', [ShopController::class, 'edit']);
    Route::post('/update-shop/{id}', [ShopController::class, 'update']);
-   Route::get('/delete-shop/{id}', [ShopController::class, 'destroy']);
+   Route::delete('/delete-shop/{id}', [ShopController::class, 'destroy'])->name('delete.shop');
    Route::get('/activate/{id}', [ShopController::class, 'activate']);
    
    // Roles
@@ -107,21 +107,21 @@ Route::get('/add-category', [CategoryController::class, 'create']);
 Route::post('/insert-category', [CategoryController::class,'store']);
 Route::get('/edit-cat/{id}', [CategoryController::class, 'edit']);
 Route::post('/update-cat/{id}', [CategoryController::class, 'update']);
-Route::get('/delete-cat/{id}', [CategoryController::class, 'destroy']);
+Route::delete('/delete-cat/{id}', [CategoryController::class, 'destroy'])->name('delete.category');
 //Products Route
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/add-product', [ProductController::class, 'create']);
 Route::post('/insert-product', [ProductController::class,'store']);
 Route::get('/edit-prod/{id}', [ProductController::class, 'edit']);
 Route::post('/update-prod/{id}', [ProductController::class, 'update']);
-Route::get('/delete-prod/{id}', [ProductController::class, 'destroy']);
+Route::delete('/delete-prod/{id}', [ProductController::class, 'destroy'])->name('delete.product');
 
 //Orders management
 Route::get('/orders', [OrderController::class,'index']);
 Route::get('/view-orders/{id}', [OrderController::class,'view']);
 Route::put('/update-order/{id}', [OrderController::class,'update']);
 Route::get('/order-history', [OrderController::class,'history']);
-Route::get('/delete-order/{id}', [OrderController::class,'destroy']);
+Route::delete('/delete-order/{id}', [OrderController::class,'destroy'])->name('delete.orders');
 
 
 //Dashbord Access

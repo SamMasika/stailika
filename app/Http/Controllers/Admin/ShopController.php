@@ -28,7 +28,8 @@ class ShopController extends Controller
             ->get();
             
         }
-        return view('admin.shop.index',compact('shops'));
+        $users=User::all();
+        return view('admin.shop.index',compact('shops','users'));
     }
 
     public function create()

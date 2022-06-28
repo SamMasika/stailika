@@ -31,9 +31,9 @@
 @section('content')
 <div class="card">
 
-    <div class="card-header">
+    <div class="card-header bg-primary">
       <h4>Roles
-          <a href="{{url('create-role')}}" class="btn btn-primary  float-right "  data-bs-toggle="modal" data-bs-target="#roleModal">Create Role</a>        
+          <a href="{{url('create-role')}}" class="btn btn-success  float-right "  data-bs-toggle="modal" data-bs-target="#roleModal">Create Role</a>        
       </h4>
     </div>
 </div>
@@ -91,7 +91,7 @@
         <input type="text" class="form-control" name="name">
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Create</button>
+          <button type="submit" class="btn btn-success">Create</button>
        </div>
     </form>
       </div>
