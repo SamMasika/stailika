@@ -38,6 +38,7 @@ use App\Http\Controllers\Auth\PermissionRoleController;
 Route::get('/', [FrontendController::class, 'index']);
 Route::get('/category', [FrontendController::class, 'category']);
 Route::get('/view-category/{slug}', [FrontendController::class,'viewcategory']);
+Route::get('/view-product/{slug}', [FrontendController::class,'viewproduct']);
 Route::get('/category/{cate_slug}/{prod_slug}', [FrontendController::class,'productview']);
 
 Auth::routes();

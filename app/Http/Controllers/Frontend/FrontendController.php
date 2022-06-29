@@ -19,7 +19,7 @@ class FrontendController extends Controller
                  ->select('products.shop_id','shops.name')
                    ->where('is_active',1)
                     ->where('trending',1);
-        })
+        })->take(10)
         ->get();
         // $fproducts=Product::crossJoin('shops')
         // ->where('shop_id',$shop_id )
@@ -44,6 +44,23 @@ class FrontendController extends Controller
            $category=Category::where('slug',$slug)->first();
            $product=Product::where('cate_id',$category->id)->where('status','0')->get();
            return view('frontend.product.index',compact('category','product'));
+        }
+        else
+        {
+            return redirect('/')->with('status','Slug does not exist');
+        }
+        
+    }
+
+
+
+    public function viewproduct($slug)
+    {
+        if(Product::where('slug',$slug)->exists())
+        {
+           $product=Product::where('slug',$slug)->first();
+        //   $product=Product::where('cate_id',$category->id)->where('status','0')->get();
+           return view('frontend.product.view',compact('product'));
         }
         else
         {

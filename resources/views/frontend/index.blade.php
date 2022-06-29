@@ -14,7 +14,7 @@
             <div class="owl-carousel featured-carousel owl-theme">
                 @foreach ($fproducts as $prod)
                 <div class="item">
-                     {{-- <a href="{{url('view-category/'.$tcate->slug)}}"> --}}
+                     <a href="{{url('view-product/'.$prod->slug)}}">
                     <div class="card">
                         <img src="{{asset('admin/images/product/'.$prod->image)}}" alt="Product image">
                         <div class="card-body">
@@ -24,6 +24,7 @@
                             <span class="float-end"><s>Tsh.{{$prod->origin_price}}/=</s></span>
                         </div>
                     </div>
+                     </a>
                 </div>  
                 @endforeach
                 
@@ -45,7 +46,7 @@
                         <img src="{{asset('admin/images/category/'.$tcate->image)}}" alt="Product image">
                         <div class="card-body">
                             <h5>{{$tcate->name}}</h5>  
-                            {{-- <h5>{{$tcate->shop->name}}</h5>   --}}
+                            <h5><b>@:{{$tcate->shop->name}}</b></h5>  
                             <p>
                                 {{$tcate->description}}
                             </p>

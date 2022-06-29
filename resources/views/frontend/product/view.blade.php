@@ -28,7 +28,9 @@
                     <img src="{{url('admin/images/product/'.$product->image)}}" class="w-100" alt="">
                 </div>
                 <div class="col-md-8">
+                    <h5> <b>@:{{$product->shop->name}}</b></h5>
                     <h2 class="mb-0">
+                         
                         {{$product->name}}
                         @if ($product->trending=='1')
                         <label style="font-size: 16px" class="float-end badge bg-danger trending_tag">Trending</label>
