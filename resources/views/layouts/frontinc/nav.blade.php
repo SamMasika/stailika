@@ -10,8 +10,19 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" href="{{url('category')}}">Category</a>
+          </li> --}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Category
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{{url('category')}}">All Categories</a></li>
+              {{-- <li><a class="dropdown-item" href="#">Another action</a></li> --}}
+              <li><hr class="dropdown-divider"></li>
+              {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url('cart')}}">Cart
@@ -63,6 +74,7 @@
                 </li>
               @endguest
         
+              
         </ul>
       </div>
     </div>

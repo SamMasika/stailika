@@ -8,9 +8,8 @@
     </h4>
   </div>
 </div>
-  {{-- <div class="card-body"> --}}
-    {{-- <div class="card"> --}}
-   <table class="table  table-hover table-responsive w-auto">
+    <div class="table-responsive">
+   <table class="table  table-hover table-bordered" id="shop">
      <thead>
        <tr>
          <th>Name</th>
@@ -18,7 +17,6 @@
          <th>Owner Name</th>
          <th>Status</th>
          <th>Action</th>
-        
        </tr>
      </thead>
      <tbody>
@@ -53,7 +51,7 @@
        @endforeach  
      </tbody>
    </table>
-  {{-- </div> --}}
+  </div>
 
  
 

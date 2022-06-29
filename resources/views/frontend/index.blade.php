@@ -46,10 +46,10 @@
                         <img src="{{asset('admin/images/category/'.$tcate->image)}}" alt="Product image">
                         <div class="card-body">
                             <h5>{{$tcate->name}}</h5>  
-                            <h5><b>@:{{$tcate->shop->name}}</b></h5>  
                             <p>
                                 {{$tcate->description}}
                             </p>
+                            <h5><b>@:{{$tcate->shop->name}}</b></h5>  
                         </div>
                     </div>
                  </a>

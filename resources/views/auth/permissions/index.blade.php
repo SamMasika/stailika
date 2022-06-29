@@ -30,37 +30,28 @@
 
 @section('content')
 <div class="card">
-
     <div class="card-header bg-primary">
       <h4> Permissions
         {{-- @can('create-permission') --}}
         <a href="{{url('create-permission')}}" class="btn btn-success float-right " data-bs-toggle="modal" data-bs-target="#roleModal">Create Permission</a>  
          {{-- @endcan --}}
-        
       </h4>
     </div>
-</div>
-{{-- <div class="card"> --}}
-  
-  {{-- <div class="card-body"> --}}
-      {{-- <h3>{{ Str::camel($permission['name']) }}</h3> --}}
-      <table class="table table-responsive table-hover w-auto">
+  </div>
+  <div class="table-responsive">
+      <table class="table table-bordered table-hover" id="perm">
           <thead>
               <tr>
-
-                  <th width="5%"></th>
-                  <th width="35%">Permission</th>
-                  <th width="50%">Description</th>
+                 <th >Permission</th>
+                  <th >Description</th>
                   <th>Action</th>
-                  
                 </tr>
             </thead>
-            @foreach($permissions as $permission)
-
-     <tbody>
+           
+       <tbody>
+        @foreach($permissions as $permission)
         @foreach (\Spatie\Permission\Models\Permission::where('name', $permission['name'])->get() as $perm)
         <tr>
-            <td> </td>
             <td>{{ $perm->name }}</td>
             <td>{{ $perm->description }}</td>
             <td>
@@ -74,12 +65,10 @@
        @include('auth.permissions.delete')
         </tr>
     @endforeach
-      
+    @endforeach
 </tbody>
-@endforeach
    </table>
-  {{-- </div> --}}
-{{-- </div>    --}}
+  </div>
 
 
 <!-- Modal -->

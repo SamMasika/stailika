@@ -39,9 +39,9 @@
 </div>
 {{-- <div class="card"> --}}
   
-  {{-- <div class="card-body"> --}}
+  <div class=" table-responsive">
       {{-- <h3>{{ Str::camel($rolission['name']) }}</h3> --}}
-      <table class="table  table-hover table-responsive w-auto">
+      <table class="table  table-hover table-bordered " id="rol">
           <thead>
               <tr>
 
@@ -50,9 +50,9 @@
                   <th>Action</th>
                 </tr>
             </thead>
-            @foreach($roles as $role)
-
-     <tbody>
+            
+            <tbody>
+       @foreach($roles as $role)
         @foreach (\Spatie\Permission\Models\Role::where('name', $role['name'])->get() as $rol)
         <tr>
             <td> </td>
@@ -69,10 +69,10 @@
               @include('auth.roles.delete')
         </tr>
     @endforeach
+    @endforeach
 </tbody>
-@endforeach
    </table>
-  {{-- </div> --}}
+  </div>
 {{-- </div>    --}}
 
 

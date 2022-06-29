@@ -12,8 +12,8 @@
   </div>
 </div>
 
-{{-- <div class="card"> --}}
-  <table class="table table-responsive table-hover w-auto">
+<div class="table-responsive ">
+  <table class="table table-hover table-bordered" id="product">
      <thead>
        <tr>
          <th>ID</th>
@@ -51,7 +51,7 @@
        @endforeach  
      </tbody>
    </table>
-  {{-- </div>       --}}
+  </div>      
 
   <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

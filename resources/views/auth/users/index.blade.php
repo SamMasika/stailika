@@ -7,7 +7,8 @@
   </div>
 </div>
   {{-- <div class="card-body"> --}}
-   <table class="table table-hover table-responsive  w-auto">
+    <div class="table-responsive">
+   <table class="table table-hover table-bordered " id="users">
      <thead>
        <tr>
          <th>ID</th>
@@ -34,6 +35,6 @@
        @endforeach      
      </tbody>
    </table>
-  {{-- </div> --}}
+  </div>
 {{-- </div> --}}
 @endsection
