@@ -70,6 +70,7 @@ Route::middleware(['auth'])->group(function () {
    
    // Roles
    Route::get('/rolepermission/{id}', [PermissionRoleController ::class, 'index']);
+   Route::get('/role-permissions/{id}', [RoleController ::class, 'rolePermissions']);
    Route::get('/roles-list', [RoleController::class, 'index']);
    Route::get('/create-role', [RoleController::class, 'create']);
    Route::post('/store-role', [RoleController::class, 'store']);
@@ -79,7 +80,8 @@ Route::middleware(['auth'])->group(function () {
    Route::get('/createassign/{id}', [PermissionRoleController::class, 'createRolePerm']);
    Route::post('/assign/{id}', [PermissionRoleController::class, 'assignPerm']);
    Route::get('/show/{id}', [PermissionRoleController::class, 'show']);
-   
+   Route::get('/remove-permission/{id}', [RoleController::class, 'removePermission'])->name('remove.permission');
+   Route::delete('/roles/{role}/permissions/{permission}', [RoleController::class, 'revokePermission'])->name('roles.permissions.revoke');
 //User Assignment
 Route::get('/user', [UserController::class, 'index']);
 Route::get('/userPerm/{id}', [UserController::class, 'UserPermView']);
@@ -89,6 +91,7 @@ Route::get('/user-details/{id}', [UserController::class, 'userDetails']);
 Route::get('/users/{id}', [UserController::class, 'destroy']);
 Route::get('/my-orders', [UserController::class, 'myorders']);
 Route::get('/view-order/{id}', [UserController::class, 'vieworder']);
+Route::get('/user-role/{id}', [UserController ::class,'userRole']);
 
 //Permissions
 Route::get('/permissions-list', [PermissionController::class, 'index']);
@@ -126,7 +129,7 @@ Route::delete('/delete-order/{id}', [OrderController::class,'destroy'])->name('d
 
 
 //Dashbord Access
-Route::get('/users', [DashboardController::class, 'users']);
+// Route::get('/users', [DashboardController::class, 'users']);
 Route::get('/view-user/{id}', [DashboardController::class, 'viewuser']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
    }); 

@@ -10,7 +10,8 @@
                 <form method="POST" action="{{ route('login') }}">
                         @csrf
                     <div class="form-field py-3">
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email/Username">
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" 
+                            placeholder="Email/Username ">
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

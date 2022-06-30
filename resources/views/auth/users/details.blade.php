@@ -1,36 +1,72 @@
-
-@extends('layouts.front')
-
+@extends('layouts.admin')
 
 @section('content')
-<div class="row">
-    <div class="col-lg-12 margin-tb">
-        <div class="pull-left">
-            <h2> Show Role</h2>
-        </div>
-        <div class="pull-right">
-            <a class="btn btn-success" href="{{url('user')}}"> Back</a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-primary">
+                  <h4> User Details
+                    <a href="{{url('user')}}" class="btn btn-success btn-sm float-right">Back</a>
+                  </h4>
+                </div>
+                <hr>
+                <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 mt-3">
+                        <label for="">Role</label>
+                        @foreach ($roles as $role)
+                        <div class="p-2 border">{{$role->name}}</div>
+                        @endforeach
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <label for="">First Name</label>
+                        <div class="p-2 border">{{$users->name}}</div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <label for="">Last Name</label>
+                        <div class="p-2 border">{{$users->lname}}</div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <label for="">Email</label>
+                        <div class="p-2 border">{{$users->email}}</div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <label for="">Phone</label>
+                        <div class="p-2 border">{{$users->phone}}</div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <label for="">Address 1</label>
+                        <div class="p-2 border">{{$users->address1}}</div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <label for="">Address 2</label>
+                        <div class="p-2 border">{{$users->address2}}</div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <label for="">City</label>
+                        <div class="p-2 border">{{$users->city}}</div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <label for="">State</label>
+                        <div class="p-2 border">{{$users->state}}</div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <label for="">Country</label>
+                        <div class="p-2 border">{{$users->country}}</div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <label for="">Pincode</label>
+                        <div class="p-2 border">{{$users->pincode}}</div>
+                    </div>
+                </div>
+                </div>
+              </div>
+                    
         </div>
     </div>
 </div>
-
-
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Name:</strong>
-            {{ $roles->name }}
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>Permissions:</strong>
-            @if(!empty($rolePermissions))
-                @foreach($rolePermissions as $v)
-                    <label class="label label-success">{{ $v->name }},</label>
-                @endforeach
-            @endif
-        </div>
-    </div>
-</div>
-@endsection 
+    
+         
+           
+@endsection

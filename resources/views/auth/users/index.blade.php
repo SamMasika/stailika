@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="card">
-  <div class="card-header">
+  <div class="card-header bg-primary">
     <h4>Registered Users</h4>
   </div>
 </div>
@@ -26,7 +26,6 @@
         <td>
           <div class="">
           <a href="{{url('view-user/'.$user->id)}}" ><i class="fa fa-eye" title="View"></i></a>
-          {{-- <a href="{{url('rolepermission/'.$user->id)}}"><i class="fa fa-eye" title="View"></i></a> --}}
           <a href="{{url('users/'.$user->id)}}" ><i class="fa fa-trash" title="Delete"></i></a>
           <a href="{{url('userPerm/'.$user->id)}}" class="btn btn-primary btn-sm" >AssignRole</a>
         </div>

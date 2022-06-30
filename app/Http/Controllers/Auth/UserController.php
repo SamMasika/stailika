@@ -44,10 +44,18 @@ class UserController extends Controller
     public function index()
     {
         $users=User::all();
-        // return Auth::user()->removeRole('admin');
-       // return $user;
                return view('auth.users.index',compact('users'));
     }
+
+    // public function userRole($id)
+    // {
+    //           $users=User::find($id);
+    //           $roles = Role::join('model_has_roles', 'model_has_roles.role_id', '=', 'roles.id')
+    //                     ->join('users', 'users.id', '=', 'model_has_roles.role_id')
+    //                     ->where('model_has_roles.model_id',$id)
+    //                     ->get(['roles.name',]);
+    //                     return view('auth.users.userRole',compact('users','roles'));         
+    // }
 
     public function UserPermView($id)
     {
@@ -64,18 +72,15 @@ class UserController extends Controller
        
         if ($user->hasRole($request->role))
         {
-            return redirect('/user')->with('error', 'Role exists.');        
+            return redirect('/user')->with('status', 'Role exists.');        
         }
         else
         {
 
             $user->assignRole($request->role);
-            return redirect('/user')->with('success', 'Role assigned.');
+            return redirect('/user')->with('status', 'Role assigned.');
         }
     }
-
-
-    
     public function givePermission(Request $request,$id)
     {
         $user=User::find($id);

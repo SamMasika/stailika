@@ -6,4 +6,5 @@ $(document).ready(function () {
     $('#category').DataTable();
     $('#perm').DataTable();
     $('#rol').DataTable();
+    $('#role-perm').DataTable();
 });

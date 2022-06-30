@@ -59,7 +59,7 @@
             <td>{{ $rol->name }}</td>
             <td>
                 <div class=" btn-group ">
-                <a href="" class=""><i class="fa fa-eye" title="View"></i></a>
+                  <a href="{{url('role-permissions/'.$rol->id)}}"><i class="fa fa-eye" title="View Role-Permissions"></i></a>
                 <a href="{{url('edit-role/'.$rol->id)}}" ><i class="fa fa-pencil" title="Edit"></i></a>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#ModalDelete{{$rol->id}}"><i class="fa fa-trash" title="Delete"></i></a>
                 <a href="{{url('createassign/'.$rol->id)}}" class="btn btn-primary btn-sm">AssignPermissions</a>

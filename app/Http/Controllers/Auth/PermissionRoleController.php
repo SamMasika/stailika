@@ -16,13 +16,19 @@ class PermissionRoleController extends Controller
         // $permissions = $users->getPermissionsViaRoles();
         // $roles = $users->getRoleNames();
         // return  $roles;
-        $roles=Role::find($id);
-        $rolePermissions= Permission::join("role_has_permissions","role_has_permissions.permission_id","=","permissions.id",)
-        ->where("role_has_permissions.role_id",$id)
-        ->get();
-    return view('auth.users.details',compact('roles','rolePermissions'));
+    //     $roles=Role::find($id);
+    //     $rolePermissions= Permission::join("role_has_permissions","role_has_permissions.permission_id","=","permissions.id",)
+    //     ->where("role_has_permissions.role_id",$id)
+    //     ->get();
+    // return view('auth.users.details',compact('roles','rolePermissions'));
     //    return $role->permissions;
-        
+
+    $users=User::find($id);
+    $roles = Role::join('model_has_roles','model_has_roles.role_id' , '=', 'roles.id')
+              ->where('model_has_roles.role_id',$id)
+              ->get(['roles.name',]);
+              return  $roles ;
+              return view('auth.roles.role',compact('users','roles'));
     }
 
     public function assignPerm(Request $request,$id)

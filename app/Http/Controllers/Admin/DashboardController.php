@@ -31,8 +31,12 @@ class DashboardController extends Controller
     public function viewuser($id)
     {
         $users=User::find($id);
-        $roles =Role::all();
-        return view('admin.users.view',compact('users','roles'));
+        $users=User::find($id);
+        $roles = Role::join('model_has_roles', 'model_has_roles.role_id', '=', 'roles.id')
+                  ->join('users', 'users.id', '=', 'model_has_roles.role_id')
+                  ->where('model_has_roles.model_id',$id)
+                  ->get(['roles.name',]);   
+        return view('auth.users.details',compact('users','roles'));
     }
 
 }
